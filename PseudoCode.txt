@@ -1,0 +1,34 @@
+start
+	Declarations
+		num customerId
+		num callsMade
+		num callMinutes
+		num customerBill
+		num CALLS = 100
+		num MINUTES = 500
+		num BASIC_SERVICE = 30.00
+		num PREMIUM = 20.00
+	housekeeping()
+	while not eof
+		detailLoop()
+	endwhile
+	finish()
+stop
+
+housekeeping()
+	output "Phone payment calculator"
+	input customerId, callsMade, callMinutes
+return
+
+detailLoop()
+	customerBill = BASIC_SERVICE
+	if callsMade > CALLS then
+		customerBill = customerBill + PREMIUM
+	endif
+	output customerId, callsMade, "calls made; used ", callMinutes, "minutes. Total bill $", customerBill
+	input customerId, callsMade, callMinutes
+return
+
+finish()
+output "Program ended"
+return
