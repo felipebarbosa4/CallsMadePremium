@@ -14,6 +14,7 @@ public class Chap4_7d_DriveRite {
         int premiumYear;
         int accident3y;
         int quit = -1;
+        char a ;
 
         Scanner input = new Scanner(System.in);
 
